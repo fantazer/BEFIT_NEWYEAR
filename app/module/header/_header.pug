@@ -1,0 +1,87 @@
+mixin header()
+	//block header
+	.filter.js-slide-block-close
+	.header-wrap
+		.main-cont
+			.header
+				a(href="/").logo.f.f-mid
+					img(src="img/logo.svg", alt="")
+				.f.f-mid.cp.js-modal(data-modal="location").lg__hide
+					+icon("navigation","icon icon--gray icon--24")
+					.type--main.ml-10 Санкт-Петербург
+				a(href="tel:8 (499) 110-12-15" ).phone.lg__hide 8 (499) 110-12-15
+				.header-nav
+					-
+						var items = [
+							{name: "Вопрос - ответ", id: "#navFAQ"},
+							{name: "Доставка", id: "#navDelivery"},
+						];
+					each item in items
+						a(href=item.id).header-nav__el.type--w500.js-scroll-to #{item.name}
+				.ml-a.lg__show
+					a(href="tel:8 (499) 110-12-15").header-msg__el.modal-get
+						+icon("phone","icon")
+				.head-toggle.lg__show.header-msg__el.js-slide-block-toggle(data-menu="menu")
+					+icon("menu","icon")
+				.header-cart.js-slide-block-toggle(data-menu="cart")
+					+icon("cart","icon icon--white icon--24")
+					.type--white.ml-10.type--w500.lg__hide Корзина
+					.header-cart-val 12
+	// mobile menu
+	.slide-block.slide-block--right.slide-block--menu(data-menu="menu")
+		.js-accordion.p-24
+			.f.f-between.mb-24
+				img(src="img/logo.svg", alt="")
+				+icon("close","icon icon--24 icon-h--mark cp tr js-slide-block-close")
+			.mb-32
+				-
+					var items = [
+						{name: "Вопрос - ответ", id: "#navFAQ"},
+						{name: "Доставка", id: "#navDelivery"},
+					];
+				each item in items
+					a(href = item.id).type--w500.mb-12.db.type--18.js-slide-block-close.js-scroll-to #{item.name}
+
+			.f.f-aic.cp.mb-24
+				+icon("navigation","icon icon--gray icon--24")
+				.type--main.ml-10 Санкт-Петербург
+			a(href="tel:8 (499) 110-12-15" ).type--w700.type--20.mb-24.db 8 (499) 110-12-15
+			.soc-row
+				a(href="#").soc-row__el
+					+icon("soc-inst","icon")
+				a(href="#").soc-row__el
+					+icon("soc-vk","icon")
+				a(href="#").soc-row__el
+					+icon("soc-fb","icon")
+	// mobile menu === end
+
+	// mobile menu
+	.slide-block.slide-block--right.slide-block--menu(data-menu="cart")
+		.js-accordion
+			.f.f-column.cart
+				.f.f-between.mb-12.p-24.sm__psh-10
+					.type--w700.type--24 5 блюд
+					+icon("close","icon icon--24 icon-h--mark cp tr js-slide-block-close")
+				.cart-list.psh-24.sm__psh-10.scroll-template
+					- for (var i=0;i<6;i++)
+						.cart-item
+							.f.f-aic
+								img(src="img/item.jpg", alt="").cart-item__img.mr-24
+								.type--w700.type--14 Куриная котлета с зеленой гречей в сливочно-ореховом соусе
+							.f.f-aic
+								.type--24.type--w700 699 р
+								.type--primary.ml-12 450 г
+								.f.f-aic.f-jcsb.js-incr-wrap.ml-a
+									.f.f-mid.icon--44.br-round.bor.bor--border.js-inc-nav.js-inc-nav--minus.cp.bor-h--mark.tr
+										+icon("minus","icon icon--mark")
+									.type--w700.msh-16
+										span.js-incr-val 1
+										span шт
+									.f.f-mid.icon--44.br-round.bor.bor--border.js-inc-nav.js-inc-nav--plus.cp.bor-h--mark.tr
+										+icon("plus","icon icon--mark")
+				.cart-get.bg--mark.p-16.cp.tr.bg-h--greenDark
+					.type--w700.type--white.type--32.type--center.sm__type--18 Заказать — 16 278 р
+
+		// mobile menu === end
+
+	//block header end

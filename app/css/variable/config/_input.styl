@@ -1,0 +1,728 @@
+// === Inputs ===
+.input,.textarea,.select
+	padding 25px 20px 12px 20px
+	border 1px solid $border-color
+	resize: none
+	outline: 0 !important
+	border-radius 4px
+	font-family $v-font
+	display block!important
+	placeholder(#888888)
+	background: $fieldBackground
+	tr(all)
+	line-height: 1.6
+	width: 100%
+	&:focus
+		border 1px solid $borderHover
+		background: white
+		color black
+
+// calc border size
+for $listBrItem in $listBr
+	.br-{$listBrItem}
+		border-radius $listBrItem px
+
+.sm__br-0
+	+below(640px)
+		br(0)
+
+.br-round
+	border-radius 50%
+
+.bor
+	border-width 1px
+	border-style solid
+
+.bor-t
+	border-top-width 1px
+	border-right-width 0
+	border-bottom-width 0
+	border-left-width 0
+	border-style solid
+
+.bor-b
+	border-top-width 0
+	border-right-width 0
+	border-bottom-width 1px
+	border-left-width 0
+	border-style solid
+
+.bor-b-dashed
+	border-top-width 0
+	border-right-width 0
+	border-bottom-width 1px
+	border-left-width 0
+	border-style dashed
+
+.bor-r
+	border-top-width 0
+	border-right-width 1px
+	border-bottom-width 0
+	border-left-width 0
+	border-style solid
+
+.bor-l
+	border-left 1px
+// calc border size === end
+
+
+.input--simple
+	padding: 16px 20px
+
+.input--disable
+	@extend .disabled
+	& + .input-placeholder-val
+		color $typeDisable
+
+// checkbox + radio style
+.style-label
+	display flex
+	position relative
+	align-items center
+	cp()
+.style-label--disable
+	@extend .disabled
+
+.check-el
+	input
+		position absolute
+		top 0
+		left -9999px
+
+
+
+.style-input-text
+	+below(640px)
+		width: calc(100% - 60px)
+	color black
+	line-height: 1.6
+	a
+		color $mark
+
+// checkbox
+.style-label--checkbox
+	.style-input-element
+		br(4px)
+		cp()
+		tr(all)
+		size 32px
+		min-width 32px
+		position relative
+		display inline-block
+		margin-right 16px
+		background white
+		border 1px solid $border-color
+		&:hover
+			border 2px solid $borderHover
+	&.style-label--disable
+		.style-input-element
+			background: $fieldBackground!important
+	.icon
+		display none
+	.style-input
+		&:checked ~ .style-input-element
+			flex(mid)
+			color white
+			background: $stateSuccess
+			border 1px solid $stateSuccess
+			.icon
+				display block
+				fill white
+				size 24px
+
+.check-el--navy
+	.style-input
+		&:checked ~ .style-input-element
+			background: $navy
+			border 1px solid $navy
+
+// checkbox === end
+
+// radio
+.style-label--radio
+	.style-input-element
+		size 32px
+		position relative
+		display inline-block
+		margin-right 16px
+		background white
+		border 2px solid $border-color
+		round()
+		cp()
+		tr()
+		&:hover
+			border 2px solid $mark
+	&.style-label--disable
+		.style-input-element
+			background: $fieldBackground!important
+	.style-input
+		&:checked ~ .style-input-element
+			flex(mid)
+			color white
+			border 1px solid $stateSuccess
+			background: $stateSuccess
+			.icon-radio
+				round()
+				size 16px
+				background white
+// radio === end
+
+
+.style-label--remove
+	.style-input
+		&:checked ~ .style-input-element
+			border 1px solid $stateError
+			background: $stateError
+		&:checked ~ .style-input-text
+			color red
+			text-decoration: line-through
+// checkbox + radio style === end
+
+
+//form
+.input-row
+	+below(640px)
+		margin-bottom: 16px
+	position relative
+	margin-bottom: 24px
+	.input
+		width: 100%
+	&.active
+		.input-msg
+			display block
+
+.input-row--clear
+	margin-bottom: 0
+
+.input-row--full
+	height: 100%
+	textarea
+		height: calc(100% - 24px)
+.input-btn-cont
+	f()
+	align-items: flex-start
+	.input-row
+		+below(640px)
+			width: 100%
+			min-width initial
+		margin-right: 28px
+		min-width 300px
+
+.input-btn-cont--full
+	+below(640px)
+		fl()
+	.input-row
+		width: 100%
+
+.input-row__title
+	margin-bottom: 10px
+
+.input-row--error
+	margin-bottom: 16px
+	.input
+		border-color $stateError
+		color $stateError
+	.input-msg
+		display block
+		color $stateError
+	.error
+		color $stateError
+	.style-input-element
+		border 1px solid $stateError
+
+.input-row--success
+	margin-bottom: 16px
+	.input-msg
+		display block
+		color $stateSuccess
+
+.input-msg
+	margin: 10px 0 0 0
+	display none
+
+.input-row--validate
+	position relative
+	.input
+		padding-right: 50px
+	&>.icon
+		position absolute
+		top 20px
+		right: 20px
+		display none
+	&.input-row--error
+		.icon-validate-false
+			display block!important
+			fill $stateError
+	&.input-row--success
+		.icon-validate-true
+			display block!important
+			fill $stateSuccess
+
+.validate-el
+	display none
+	&.validate-el--false
+		display block
+	&.validate-el--true
+		display block
+
+.validate-el--false
+	.validate-msg--error
+		display block
+
+.validate-msg--error
+	display none
+
+.validate-el--true
+	.validate-msg--success
+		display block
+
+.validate-msg--success
+	display none
+
+.input-row--promocode
+	position relative
+	cp()
+	&:hover
+		.icon
+			fill black!important
+	.input
+		cp()
+		padding-right: 50px
+		color black
+		font-weight: 500
+		&::selection { background: transparent!important; }
+		&::-moz-selection { background: transparent!important; }
+		&:focus
+			pointer-events none!important
+			background: $fieldBackground
+	.icon
+		position absolute
+		top 20px
+		right: 20px
+		cp()
+		tr()
+		fill $grayLight
+	&.active
+		.input-msg
+			margin-bottom: -32px
+.input-cont
+	+below(640px)
+		grid-row-gap 0
+	display: grid
+	grid-gap 20px
+
+.input-cont--list
+	+below(640px)
+		grid-gap 20px
+
+.input-cont--two
+	+below(640px)
+		grid-template-columns: 1fr
+	grid-template-columns: 1fr 1fr
+
+.input-cont--three
+	+below(640px)
+		grid-template-columns: 1fr
+	grid-template-columns: 1fr 1fr 1fr
+
+.input-cont--four
+	+below(640px)
+		grid-template-columns: 1fr 1fr
+	grid-template-columns: repeat(4,1fr)
+
+
+//checkbox remember
+.login-remember
+	.style-label
+		+below(768px)
+			align-items: flex-start
+	.style-input-text
+		font-size: 14px
+		color black
+		line-height: 1.6
+		margin-top: 3px
+		a
+			color $mark
+	margin-bottom: 20px
+
+.input-get
+	f()
+	align-items stretch
+	margin-bottom: 20px
+	.input
+		border-radius 5px 0 0 5px
+.input-get__btn
+	position relative
+	.icon
+		position absolute
+		size 14px
+		fill white
+		top 50%
+		left 50%
+		margin-left: -7px
+		margin-top: -7px
+	.input-get__btn-el
+		height: 100%
+		background: $mark
+		border-radius 0 5px 5px 0
+		border 0
+		width: 60px
+		&:hover
+			background: darken($mark,5)
+
+
+
+// incr
+.incr
+	f()
+	position relative
+	border 1px solid $border-color
+	br(22px)
+	tr()
+	height: 44px
+	&:hover
+		box-shadow: 0px 4px 8px rgba(102, 130, 185, 0.12);
+.incr__nav
+	flex(mid)
+	tr(all)
+	size 40px
+	round()
+	.icon
+		size 20px
+		fill $gray
+		tr()
+	&:hover
+		cp()
+		.icon
+			fill $mark
+
+
+.incr__val
+	flex(mid)
+	background white
+	position relative
+	tr(all)
+	padding: 0 15px
+	span
+		outline: none
+		user-select: none
+
+// Переключение с кнопки на инкремент
+.incr-btn
+	.incr-btn-wrap
+		display: none
+.incr-btn--active
+	.incr-btn__el
+		display: none
+	.incr-btn-wrap
+		display: block
+
+// incr === end
+
+//animate input
+.input-placeholder-val
+	position: absolute
+	left 20px
+	top 20px
+	tr(all)
+	color $typePrimary
+
+.input:focus+span,
+.input[data-empty="false"] + span
+	top 10px
+	font-size: 10px
+	color $typeSecondary!important
+//animate input-end
+
+
+// switch
+.switch
+	position relative
+	background: $grayPrimary
+	height: 34px
+	min-width: 62px
+	width: 62px
+	br(18px)
+	cp()
+	&:before
+		content ''
+		tr()
+		size 24px
+		round()
+		background: white
+		position absolute
+		left 6px
+		top 4.5px
+.switch.active
+	background: $stateSuccess
+	&:before
+		content ''
+		size 24px
+		round()
+		background: white
+		position absolute
+		left calc(100% - 30px)
+.switch-row
+	f()
+	align-items center
+	gap(20px)
+
+.switch-btn
+	display: inline-flex
+	padding: 4px
+	br(32px)
+	cp()
+.switch-btn__val
+	padding: 12px 32px
+	br(32px)
+	font-weight: 700
+
+.switch-btn--green
+	background: $greenLight
+	.switch-btn__val
+		color $greenPrimary
+		&.active
+			color white
+			background: $greenPrimary
+
+// switch === end
+
+
+// drop
+.dropdown
+	width: 100%
+	display inline-block
+	tr()
+	position relative
+	outline none!important
+	&.active
+		.dropdown-current
+			background: white
+			&>.icon
+				transform rotate(180deg)
+
+
+.dropdown-current
+	br(4px)
+	tr()
+	background: $fieldBackground
+	border 1px solid $border-color
+	cursor pointer
+	display block
+	padding 28px 46px 12px 20px
+	position relative
+	&:hover
+		border 1px solid $borderHover
+		.icon
+			fill black
+	&>.icon
+		position absolute
+		top calc(50% - 12px)
+		right 20px
+		size 24px
+		tr()
+		fill $grayLight
+
+.dropdown-current--flat
+	padding: 20px
+.dropdown-current--white
+	border 0!important
+	background: white
+	.icon
+		fill black
+
+.dropdown-current__val
+	color black
+	white-space nowrap
+	text-overflow ellipsis
+	overflow hidden
+.dropdown-title
+	position absolute
+	top 8px
+	left 20px
+	@extend .type--sm
+	color $typeSecondary
+
+.dropdown-menu
+	position absolute
+	background-color #fff
+	width 100%
+	br(4px)
+	box-shadow 0 12px 32px rgba(41, 42, 53, 0.16)
+	overflow hidden
+	display none
+	max-height 200px
+	overflow-y auto
+	z-index 110
+	&::-webkit-scrollbar
+		-webkit-appearance: none
+		width: 7px
+		background: #f3f3f3
+	&::-webkit-scrollbar-thumb
+		border-radius: 2px
+		background-color: rgba(0, 0, 0, .5)
+		-webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5)
+
+.dropdown-menu--full
+	max-height initial
+
+.dropdown-menu__el
+	padding 18px 20px
+	cp()
+	tr()
+	//background: #f9f9f9
+	display block
+	&:last-child
+		border 0
+	&:hover
+		background: $greenLight
+		color black
+
+.dropdown--shrink
+	.dropdown-current
+		+below(640px)
+			padding: 8px 20px 8px 8px!important
+			&>.icon
+				size 12px
+				top calc(50% - 6px)
+				right: 6px
+		height: 100%
+	.dropdown-menu
+		+below(640px)
+			width: 200px
+		width: 480px
+		max-height: initial
+		padding: 20px
+		margin-top: 8px
+		br(8px)
+	.dropdown-menu-list
+		+below(640px)
+			grid-template-columns: 1fr
+			grid-gap 12px
+		display: grid
+		grid-gap 16px
+		grid-template-columns: repeat(2, 1fr)
+	.dropdown-menu__el
+		display inline-block
+		//white-space nowrap
+		padding: 0
+		max-widht 220px
+		&:hover
+			background: none
+			color $mark
+.dropdown--fluid
+	width: auto
+	.dropdown-current
+		padding-right: 60px
+// drop === end
+
+.box
+	padding: 24px
+	br(12px)
+	border 1px solid $border-color
+
+
+.grid-4
+	+below(1024px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(640px)
+		grid-template-columns: 1fr
+	display: grid
+	grid-gap 28px
+	grid-template-columns: repeat(4, 1fr)
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+
+.grid-3
+	+below(1024px)
+		grid-template-columns: repeat(2, 1fr)
+	+below(640px)
+		grid-template-columns: 1fr
+	display: grid
+	grid-gap 28px
+	grid-template-columns: repeat(3, 1fr)
+	//grid-template-columns: repeat(auto-fill, minmax(12rem,1fr))
+
+
+// upload
+.upload-wrap
+	f()
+	align-items center
+	fw()
+.upload
+	+below(640px)
+		width: 100%
+		margin-bottom: 10px
+	f()
+	cp()
+	tr(all)
+
+.upload__text
+	color $mark
+	font-weight: 500
+	flex(mid)
+	margin-left: 16px
+.upload-list
+	width: 100%
+.upload-list__el
+	background-size: cover
+	background-repeat: no-repeat
+	position: relative
+	overflow: hidden
+	margin-bottom: 12px
+	f()
+	align-items center
+	grid-gap 6px
+	padding: 6px 12px
+	background: $fieldBackground
+	width: 100%
+	whtie-space nowrap
+	text-overflow ellipsis
+	br(10px)
+	tr()
+	cp()
+	font-weight: 700
+	span
+		overflow: hidden
+		white-space nowrap
+		text-overflow ellipsis
+	.icon
+		size 16px
+		min-width 16px
+	&:hover
+		background: darken($fieldBackground,10)
+.upload-btn
+	position: absolute
+	left -9999px
+// upload === end
+
+
+// calc border size
+
+
+// style date input
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator
+	background: transparent;
+	bottom: 0;
+	color: transparent;
+	cursor: pointer;
+	height: auto;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: auto;
+
+input[type="date"]::-webkit-min-logical-width
+	width 100%
+	height: 66px!important
+input[type="date"]
+	-webkit-appearance: none!important
+
+.input-date
+	height: 66px!important
+	span
+		top 10px
+		font-size: 10px
+		color $typeSecondary!important
+// style date input === end

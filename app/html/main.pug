@@ -1,0 +1,105 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content
+		.board__el.bg--mark.mb-64
+			.main-cont
+				.row.g-gap-20.md__f.md__f-column.md__fw.md__psv-32
+					.g-1-6.f-asc.pt-40.pb-40.md__g-1-12.md__w80.md__order-2.sm__pb-0.sm__w100
+						.type--64.type--w700.type--white.type--lh-1_2.mb-40.lg__type--40.md__type--center.sm__type--32 Готовые новогодние блюда с доставкой на дом
+						.f.f-aic.w70.mb-24.lg__w100
+							img(src="img/сhristmasTree.png", alt="").icon--44
+							.type--white.type--md.type--w700.ml-16 с 25 по 14 января заказывайте любимые новогодние блюда
+						.f.f-aic.w70.mb-24.lg__w100
+							img(src="img/smile-happy.png", alt="").icon--44
+							.type--white.type--md.type--w700.ml-16 без майонеза и вредных добавок
+						.f.f-aic.w70.mb-24.lg__w100
+							img(src="img/smile-tongue.png", alt="").icon--44
+							.type--white.type--md.type--w700.ml-16 сэкономьте время на готовке, уделите лучше его своим близким
+					.g-7-12.f-asfe.md__g-1-12.f-asc.ml-a.md__ml-0.md__f-aic.md__order-1
+						img(src="img/banner.png", alt="").mt-40.md__mt-0.sm__mt-0
+
+		.main-cont
+			-
+				var items = [
+					'Первые блюда',
+					'Вторые блюда',
+					'Салаты'
+					];
+			each item in items
+				.type--w700.type--lgx.mb-32=item
+				.g.g-3.g-gap-20.mb-64.lg__g-2.sm__g-1
+					- for (var i=0;i<5;i++)
+						.f.f-column.h100.bor.bor--border.br-8.overflow
+							.p-44p.pos-r
+								img(src="img/item.jpg", alt="").pos-a.pos-cover.obj-cov
+							.f.f-column.f-grow.p-20
+								.type--w700.type--24.mb-12 Куриная котлета с зеленой гречей в сливочно-ореховом соусе
+								.type--main.mb-24.type--secondary куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус
+								.f.f-aic
+									.type--24.type--w700.type--nowrap.sm__type--20 699 р
+									.type--primary.ml-12.mr-5.type--nowrap 450 г
+									.item-get.ml-a.js-btn-incr__wrap
+										.btn--sm.btn--markLight.js-btn-incr.w100.type--nowrap В корзину
+										.f.f-aic.f-jcsb.js-incr-wrap.hidden
+											.f.f-mid.icon--44.br-round.bor.bor--border.js-inc-nav.js-inc-nav--minus.cp.bor-h--mark.tr
+												+icon("minus","icon icon--mark")
+											.type--w700.msh-5.type--nowrap
+												span.js-incr-val 1
+												span шт
+											.f.f-mid.icon--44.br-round.bor.bor--border.js-inc-nav.js-inc-nav--plus.cp.bor-h--mark.tr
+												+icon("plus","icon icon--mark")
+
+	// FAQ
+	.main-cont.js-tab-wrap.mb-100
+		.type--w700.type--lgx.mb-48#navFAQ Часто задаваемые вопросы
+		.faq-wrap
+		-
+			var items = [
+				{
+					"list": [
+						'1. Как понять что и когда есть?',
+						'2. Как часто употреблять рационы?',
+						'3. Кто занимается составлением меню?',
+						'4. Как часто обновляется меню?',
+						'5. Могу ли я заменить или исключить блюдо?'
+					]
+				}
+
+			];
+		each item,i in items
+			.accordion.js-accordion.js-tab-cont(class=i === 0 ? 'active' : '')
+				each itemList in item.list
+					.accordion__el.js-accordion-el
+						.accordion__el-head.js-accordion-head
+							.accordion__el-head-text #{itemList}
+							.accordion__el-head-icon
+						.accordion__el-content.text.js-accordion-content
+							p Платежный план «переезд в готовый дом» - дает возможность будущему покупателю переехать из квартиры в загородный дом без полной оплаты за домовладение! Для быстрого переезда в готовый загородный дом достаточно внести 10% от стоимости коттеджа и Вы можете заселяться!
+							p На продажу имеющейся в собственности у покупателя квартиры предоставляется рассрочка четыре месяца. По факту реализации квартиры оплачивается остаточная стоимость за домовладение.
+	// FAQ === end
+
+	// deliver
+	.main-cont.mb-100
+		.deliver-wrap
+			.deliver-info
+				.type--w700.type--lgx.mb-48#navDelivery Доставка
+				.deliver-info__text.text Мы осуществляем доставку регулярно (ежедневно или раз в два дня). Каждое утро или вечер — выбор за Вами
+				.deliver-pick
+					.deliver-pick__el
+						.deliver-pick__el-color(style="background:#7eca1d")
+						.deliver-pick__el-text Доставляем бесплатно
+					.deliver-pick__el
+						.deliver-pick__el-color(style="background:#6b33b3")
+						.deliver-pick__el-text Доставка стоит 250 р.
+			.deliver-map.map-wrap
+				.map
+					//put code map her
+
+	// deliver === end
+
+	+footer()
+	+modal()
+include ./block_html/_script.pug

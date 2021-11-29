@@ -1,0 +1,23 @@
+mixin footer()
+	//block footer
+	.footer
+		// footer top
+		.main-cont
+			.footer-top
+				.footer-contact
+					a(href="tel:+7 (925) 907-35-12").footer-phone +7 (925) 907-35-12
+					.footer-work Ежедневно: с 09-00 до 21-00
+				.soc-row.soc-row--monochrome.soc-row--footer
+					a(href="#").soc-row__el
+						+icon("soc-inst","icon")
+					a(href="#").soc-row__el
+						+icon("soc-vk","icon")
+					a(href="#").soc-row__el
+						+icon("soc-fb","icon")
+				.footer-info
+					.footer-address__info.mb-16 © 2020, Letbefit, все права защищены
+					a(href="#").link--mark Политика конфиденциальности
+				a(href="#header").js-scroll-to.footer-scroll
+					+icon("arrow-up","icon")
+		// footer top === end
+	//block footer end

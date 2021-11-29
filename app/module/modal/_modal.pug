@@ -1,0 +1,17 @@
+mixin modal()
+
+	// init
+	.modal-layer
+		.modal-filter
+		.modal-wrap
+			.modal(data-modal="location")
+				.modal-content
+					.modal-close.js-modal-close
+						+icon("close","icon")
+					.type--lg.type--w700.mb-16 Вы в Москве?
+					.f.f-aic
+						.btn--sm.btn--mark.mr-16.js-modal-close Да
+						.btn--sm.btn--light.mr-16.js-modal-close Нет, в Питере
+
+	//.js-modal Открыть модальное окно
+

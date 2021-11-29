@@ -1,0 +1,246 @@
+// === Curent color ===
+navy = #001F3F
+blue = #3a90c8
+aqua = #7FDBFF
+teal = #39CCCC
+olive = #3D9970
+green = #2ECC40
+lime = #01FF70
+yellow = #FFDC00
+orange = #FF851B
+red = #FF4136
+fuchsia = #F012BE
+purple = #B10DC9
+maroon = #85144B
+white = #FFFFFF
+silver = #DDDDDD
+gray = #AAAAAA
+black = #111111
+
+
+//MAIN COLORS
+$mark = #7ECA1D
+
+$greenDark = #65a217
+$greenPrimary = #7ECA1D
+$green = #a9d96b
+$greenLight = #F3F8ED
+
+$grayPrimary = #565762
+$gray = #adaeb9
+$grayLight = #c4c5cc
+
+//ADD COlORS
+
+$pink = #ff6889
+$pinkLight = #fff3f6
+
+$violet = #6b33b2
+$violetLight = #f4eff9
+
+$orange = #ff7b27
+$orangeLight = #fff5ee
+
+$blue = #0065bd
+$blueLight = #ebf3fa
+
+$sea = #1dd0c7
+$seaLight = #edfcfb
+
+$swapm = #768668
+$swapmLight = #f4f6f3
+
+$coral = #ff4f4f
+$coralLight = #fff0f0
+
+$yellow = #ffa800
+
+$navy = #001970
+$navySecond = #0A2CA3
+$navyLight = #F2F4FC
+
+//TYPOGRAPHY COLORS
+
+$typePrimary = #5c5e6e
+$typeSecondary = #9699a8
+$typeDisable = #c8cad4
+
+//UI COLORS
+
+$borderHover = #bfc0c9
+$border = $border-color = #dcdfe8
+$fieldBackground = #f1f2f6
+$overlay = rgba(32, 34, 44, 0.5)
+
+$gradient = linear-gradient(98.95deg, #E3EEFF 0%, #E4F6E4 52.6%, #FFEEE4 100%)
+
+//STATE COLORS
+
+$stateErrorBG = #ffe1e6
+$stateError = #d00025
+
+$stateSuccessBG = #edfdd9
+$stateSuccess = #5da600
+
+$stateWarningBG = #ffedd8
+$stateWarning = #ff8a00
+
+//========================================
+
+
+$colors = {
+	'mark':$mark,
+	'white':white,
+	'black':black,
+	'greenDark':$greenDark,
+	'greenPrimary':$greenPrimary,
+	'green':$green,
+	'greenLight':$greenLight,
+	'grayPrimary':$grayPrimary,
+	'gray':$gray,
+	'grayLight':$grayLight,
+	'pink':$pink,
+	'pinkLight':$pinkLight,
+	'violet':$violet,
+	'violetLight':$violetLight,
+	'orange':$orange,
+	'orangeLight':$orangeLight,
+	'blue':$blue,
+	'blueLight':$blueLight,
+	'sea':$sea,
+	'seaLight':$seaLight,
+	'swapm':$swapm,
+	'swapmLight':$swapmLight,
+	'coral':$coral,
+	'coralLight':$coralLight,
+	'yellow':$yellow,
+
+	'navy':$navy,
+	'navySecond':$navySecond,
+	'navyLight':$navyLight,
+
+	'typePrimary':$typePrimary,
+	'typeSecondary':$typeSecondary,
+	'typeDisable':$typeDisable,
+	'stateErrorBG':$stateErrorBG,
+	'stateError':$stateError,
+	'stateSuccessBG':$stateSuccessBG,
+	'stateSuccess':$stateSuccess,
+	'stateWarningBG':$stateWarningBG,
+	'stateWarning':$stateWarning,
+	'fieldBackground':$fieldBackground,
+	'border':$border-color,
+}
+
+for $colorsName,$colorsVal in $colors
+	.bg--{$colorsName}
+		background: $colorsVal
+	.type--{$colorsName}
+		color: $colorsVal
+	.icon--{$colorsName}
+		fill $colorsVal
+	.bor--{$colorsName}
+		border-color $colorsVal
+
+for $windowSizeItem in $windowSize
+	.{$windowSizeItem[0]}__bg-none
+		@media only screen and (max-width: $windowSizeItem[1]px)
+			background: none
+
+
+el-type(bg,textColor)
+	background-color bg
+	color textColor
+	&:hover,&.active
+		background: textColor
+		color white
+	.active
+		background-color bg
+
+.el--seaLight
+	el-type($seaLight,$sea)
+
+.el--blueLight
+	el-type($blueLight,$blue)
+
+.el--pinkLight
+	el-type($pinkLight,$pink)
+
+.el--coralLight
+	el-type($coralLight,$coral)
+
+.el--violetLight
+	el-type($violetLight,$violet)
+
+.el--orangeLight
+	el-type($orangeLight,$orange)
+
+.el--swapmLight
+	el-type($swapmLight,$swapm)
+
+.el--greenLight
+	el-type($greenLight,$green)
+
+.bg--gradient
+	background: $gradient
+
+.bg--none
+	background: none
+
+.bg--full
+	bg-full()
+
+$main-text-color = black
+
+$link-color = black
+$link-color-visited = gray
+$link-color-hover = black
+
+
+// color hover
+for $colorsName,$colorsVal in $colors
+	.bg-h--{$colorsName}
+		&:hover
+			background: darken($colorsVal,5)
+	.type-h--{$colorsName}
+		&:hover
+			color: darken($colorsVal,5)
+	.icon-h--{$colorsName}
+		&:hover
+			fill darken($colorsVal,5)
+	.bor-h--{$colorsName}
+		&:hover
+			border-color darken($colorsVal,5)
+// color hover === end
+
+// box shadow
+.shadow-sm
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05)
+.shadow-h-sm
+	&:hover
+		box-shadow: 0 3px 8px 0 rgba(0,0,0,0.05)
+
+.shadow
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06)
+.shadow-h
+	&:hover
+		box-shadow: 0 3px 9px 0 rgba(0,0,0,0.1),0 3px 8px 0 rgba(0,0,0,0.06)
+
+.shadow-md
+	box-shadow: 0px 4px 8px rgba(102, 130, 185, 0.12);
+.shadow-h-md
+	&:hover
+		box-shadow: 0 10px 14px -3px rgba(0,0,0,0.1),0 8px 12px -3px rgba(0,0,0,0.06)
+
+.shadow-lg
+	box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),0 10px 10px -5px rgba(0,0,0,0.04)
+.shadow-h-lg
+	&:hover
+		box-shadow: 0 32px 36px -5px rgba(0,0,0,0.1),0 24px 24px -5px rgba(0,0,0,0.04)
+
+.shadow-xl
+	box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25)
+.shadow-h-xl
+	&:hover
+		box-shadow: 0 36px 38px -5px rgba(0,0,0,0.25)
+// box shadow === end

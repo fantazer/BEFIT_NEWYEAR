@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <!--build:css ./css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <!--endbuild-->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body id='header'>
+    <div class="page">
+        <!--block header-->
+        <div class="filter js-slide-block-close"></div>
+        <div class="header-wrap">
+            <div class="main-cont">
+                <div class="header">
+                    <a class="logo f f-mid" href="/">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
+                    <div class="f f-mid cp js-modal lg__hide" data-modal="location">
+                        <svg class="icon icon--gray icon--24">
+                            <use xlink:href="#navigation"></use>
+                        </svg>
+                        <div class="type--main ml-10">Санкт-Петербург</div>
+                    </div>
+                    <a class="phone lg__hide" href="tel:8 (499) 110-12-15">8 (499) 110-12-15</a>
+                    <div class="header-nav">
+                        <a class="header-nav__el type--w500 js-scroll-to" href="#navFAQ">Вопрос - ответ</a>
+                        <a class="header-nav__el type--w500 js-scroll-to" href="#navDelivery">Доставка</a>
+                    </div>
+                    <div class="ml-a lg__show">
+                        <a class="header-msg__el modal-get" href="tel:8 (499) 110-12-15">
+                            <svg class="icon">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="head-toggle lg__show header-msg__el js-slide-block-toggle" data-menu="menu">
+                        <svg class="icon">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                    </div>
+                    <div class="header-cart js-slide-block-toggle" data-menu="cart">
+                        <svg class="icon icon--white icon--24">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                        <div class="type--white ml-10 type--w500 lg__hide">Корзина</div>
+                        <div class="header-cart-val">12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu-->
+        <div class="slide-block slide-block--right slide-block--menu" data-menu="menu">
+            <div class="js-accordion p-24">
+                <div class="f f-between mb-24">
+                    <img src="img/logo.svg" alt="" />
+                    <svg class="icon icon--24 icon-h--mark cp tr js-slide-block-close">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </div>
+                <div class="mb-32">
+                    <a class="type--w500 mb-12 db type--18 js-slide-block-close js-scroll-to" href="#navFAQ">Вопрос - ответ</a>
+                    <a class="type--w500 mb-12 db type--18 js-slide-block-close js-scroll-to" href="#navDelivery">Доставка</a>
+                </div>
+                <div class="f f-aic cp mb-24">
+                    <svg class="icon icon--gray icon--24">
+                        <use xlink:href="#navigation"></use>
+                    </svg>
+                    <div class="type--main ml-10">Санкт-Петербург</div>
+                </div>
+                <a class="type--w700 type--20 mb-24 db" href="tel:8 (499) 110-12-15">8 (499) 110-12-15</a>
+                <div class="soc-row">
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-inst"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-vk"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-fb"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu === end-->
+        <!-- mobile menu-->
+        <div class="slide-block slide-block--right slide-block--menu" data-menu="cart">
+            <div class="js-accordion">
+                <div class="f f-column cart">
+                    <div class="f f-between mb-12 p-24 sm__psh-10">
+                        <div class="type--w700 type--24">5 блюд</div>
+                        <svg class="icon icon--24 icon-h--mark cp tr js-slide-block-close">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <div class="cart-list psh-24 sm__psh-10 scroll-template">
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-get bg--mark p-16 cp tr bg-h--greenDark">
+                        <div class="type--w700 type--white type--32 type--center sm__type--18">Заказать — 16 278 р</div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu === end-->
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="board__el bg--mark mb-64">
+                <div class="main-cont">
+                    <div class="row g-gap-20 md__f md__f-column md__fw md__psv-32">
+                        <div class="g-1-6 f-asc pt-40 pb-40 md__g-1-12 md__w80 md__order-2 sm__pb-0 sm__w100">
+                            <div class="type--64 type--w700 type--white type--lh-1_2 mb-40 lg__type--40 md__type--center sm__type--32">Готовые новогодние блюда с доставкой на дом</div>
+                            <div class="f f-aic w70 mb-24 lg__w100">
+                                <img class="icon--44" src="img/сhristmasTree.png" alt="" />
+                                <div class="type--white type--md type--w700 ml-16">с 25 по 14 января заказывайте любимые новогодние блюда</div>
+                            </div>
+                            <div class="f f-aic w70 mb-24 lg__w100">
+                                <img class="icon--44" src="img/smile-happy.png" alt="" />
+                                <div class="type--white type--md type--w700 ml-16">без майонеза и вредных добавок</div>
+                            </div>
+                            <div class="f f-aic w70 mb-24 lg__w100">
+                                <img class="icon--44" src="img/smile-tongue.png" alt="" />
+                                <div class="type--white type--md type--w700 ml-16">сэкономьте время на готовке, уделите лучше его своим близким</div>
+                            </div>
+                        </div>
+                        <div class="g-7-12 f-asfe md__g-1-12 f-asc ml-a md__ml-0 md__f-aic md__order-1">
+                            <img class="mt-40 md__mt-0 sm__mt-0" src="img/banner.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-cont">
+                <div class="type--w700 type--lgx mb-32">Первые блюда</div>
+                <div class="g g-3 g-gap-20 mb-64 lg__g-2 sm__g-1">
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="type--w700 type--lgx mb-32">Вторые блюда</div>
+                <div class="g g-3 g-gap-20 mb-64 lg__g-2 sm__g-1">
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="type--w700 type--lgx mb-32">Салаты</div>
+                <div class="g g-3 g-gap-20 mb-64 lg__g-2 sm__g-1">
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f f-column h100 bor bor--border br-8 overflow">
+                        <div class="p-44p pos-r">
+                            <img class="pos-a pos-cover obj-cov" src="img/item.jpg" alt="" />
+                        </div>
+                        <div class="f f-column f-grow p-20">
+                            <div class="type--w700 type--24 mb-12">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            <div class="type--main mb-24 type--secondary">куриное филе, кус-кус, кабачки, перец болгарский, бульон, соль, масло кисло-сладкий соус, томатный соус</div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700 type--nowrap sm__type--20">699 р</div>
+                                <div class="type--primary ml-12 mr-5 type--nowrap">450 г</div>
+                                <div class="item-get ml-a js-btn-incr__wrap">
+                                    <div class="btn--sm btn--markLight js-btn-incr w100 type--nowrap">В корзину</div>
+                                    <div class="f f-aic f-jcsb js-incr-wrap hidden">
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="type--w700 msh-5 type--nowrap">
+                                            <span class="js-incr-val">1</span>
+                                            <span>шт</span>
+                                        </div>
+                                        <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                            <svg class="icon icon--mark">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ-->
+        <div class="main-cont js-tab-wrap mb-100">
+            <div class="type--w700 type--lgx mb-48" id="navFAQ">Часто задаваемые вопросы</div>
+            <div class="faq-wrap"></div>
+            <div class="accordion js-accordion js-tab-cont active">
+                <div class="accordion__el js-accordion-el">
+                    <div class="accordion__el-head js-accordion-head">
+                        <div class="accordion__el-head-text">1. Как понять что и когда есть?</div>
+                        <div class="accordion__el-head-icon"></div>
+                    </div>
+                    <div class="accordion__el-content text js-accordion-content">
+                        <p>Платежный план «переезд в готовый дом» - дает возможность будущему покупателю переехать из квартиры в загородный дом без полной оплаты за домовладение! Для быстрого переезда в готовый загородный дом достаточно внести 10% от стоимости
+                            коттеджа и Вы можете заселяться!</p>
+                        <p>На продажу имеющейся в собственности у покупателя квартиры предоставляется рассрочка четыре месяца. По факту реализации квартиры оплачивается остаточная стоимость за домовладение.</p>
+                    </div>
+                </div>
+                <div class="accordion__el js-accordion-el">
+                    <div class="accordion__el-head js-accordion-head">
+                        <div class="accordion__el-head-text">2. Как часто употреблять рационы?</div>
+                        <div class="accordion__el-head-icon"></div>
+                    </div>
+                    <div class="accordion__el-content text js-accordion-content">
+                        <p>Платежный план «переезд в готовый дом» - дает возможность будущему покупателю переехать из квартиры в загородный дом без полной оплаты за домовладение! Для быстрого переезда в готовый загородный дом достаточно внести 10% от стоимости
+                            коттеджа и Вы можете заселяться!</p>
+                        <p>На продажу имеющейся в собственности у покупателя квартиры предоставляется рассрочка четыре месяца. По факту реализации квартиры оплачивается остаточная стоимость за домовладение.</p>
+                    </div>
+                </div>
+                <div class="accordion__el js-accordion-el">
+                    <div class="accordion__el-head js-accordion-head">
+                        <div class="accordion__el-head-text">3. Кто занимается составлением меню?</div>
+                        <div class="accordion__el-head-icon"></div>
+                    </div>
+                    <div class="accordion__el-content text js-accordion-content">
+                        <p>Платежный план «переезд в готовый дом» - дает возможность будущему покупателю переехать из квартиры в загородный дом без полной оплаты за домовладение! Для быстрого переезда в готовый загородный дом достаточно внести 10% от стоимости
+                            коттеджа и Вы можете заселяться!</p>
+                        <p>На продажу имеющейся в собственности у покупателя квартиры предоставляется рассрочка четыре месяца. По факту реализации квартиры оплачивается остаточная стоимость за домовладение.</p>
+                    </div>
+                </div>
+                <div class="accordion__el js-accordion-el">
+                    <div class="accordion__el-head js-accordion-head">
+                        <div class="accordion__el-head-text">4. Как часто обновляется меню?</div>
+                        <div class="accordion__el-head-icon"></div>
+                    </div>
+                    <div class="accordion__el-content text js-accordion-content">
+                        <p>Платежный план «переезд в готовый дом» - дает возможность будущему покупателю переехать из квартиры в загородный дом без полной оплаты за домовладение! Для быстрого переезда в готовый загородный дом достаточно внести 10% от стоимости
+                            коттеджа и Вы можете заселяться!</p>
+                        <p>На продажу имеющейся в собственности у покупателя квартиры предоставляется рассрочка четыре месяца. По факту реализации квартиры оплачивается остаточная стоимость за домовладение.</p>
+                    </div>
+                </div>
+                <div class="accordion__el js-accordion-el">
+                    <div class="accordion__el-head js-accordion-head">
+                        <div class="accordion__el-head-text">5. Могу ли я заменить или исключить блюдо?</div>
+                        <div class="accordion__el-head-icon"></div>
+                    </div>
+                    <div class="accordion__el-content text js-accordion-content">
+                        <p>Платежный план «переезд в готовый дом» - дает возможность будущему покупателю переехать из квартиры в загородный дом без полной оплаты за домовладение! Для быстрого переезда в готовый загородный дом достаточно внести 10% от стоимости
+                            коттеджа и Вы можете заселяться!</p>
+                        <p>На продажу имеющейся в собственности у покупателя квартиры предоставляется рассрочка четыре месяца. По факту реализации квартиры оплачивается остаточная стоимость за домовладение.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ === end-->
+        <!-- deliver-->
+        <div class="main-cont mb-100">
+            <div class="deliver-wrap">
+                <div class="deliver-info">
+                    <div class="type--w700 type--lgx mb-48" id="navDelivery">Доставка</div>
+                    <div class="deliver-info__text text">Мы осуществляем доставку регулярно (ежедневно или раз в два дня). Каждое утро или вечер — выбор за Вами</div>
+                    <div class="deliver-pick">
+                        <div class="deliver-pick__el">
+                            <div class="deliver-pick__el-color" style="background:#7eca1d"></div>
+                            <div class="deliver-pick__el-text">Доставляем бесплатно</div>
+                        </div>
+                        <div class="deliver-pick__el">
+                            <div class="deliver-pick__el-color" style="background:#6b33b3"></div>
+                            <div class="deliver-pick__el-text">Доставка стоит 250 р.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="deliver-map map-wrap">
+                    <div class="map">
+                        <!--put code map her-->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- deliver === end-->
+        <!--block footer-->
+        <div class="footer">
+            <!-- footer top-->
+            <div class="main-cont">
+                <div class="footer-top">
+                    <div class="footer-contact">
+                        <a class="footer-phone" href="tel:+7 (925) 907-35-12">+7 (925) 907-35-12</a>
+                        <div class="footer-work">Ежедневно: с 09-00 до 21-00</div>
+                    </div>
+                    <div class="soc-row soc-row--monochrome soc-row--footer">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-inst"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-vk"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-fb"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-info">
+                        <div class="footer-address__info mb-16">© 2020, Letbefit, все права защищены</div>
+                        <a class="link--mark" href="#">Политика конфиденциальности</a>
+                    </div>
+                    <a class="js-scroll-to footer-scroll" href="#header">
+                        <svg class="icon">
+                            <use xlink:href="#arrow-up"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- footer top === end-->
+        </div>
+        <!--block footer end-->
+        <!-- init-->
+        <div class="modal-layer">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <div class="modal" data-modal="location">
+                    <div class="modal-content">
+                        <div class="modal-close js-modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="type--lg type--w700 mb-16">Вы в Москве?</div>
+                        <div class="f f-aic">
+                            <div class="btn--sm btn--mark mr-16 js-modal-close">Да</div>
+                            <div class="btn--sm btn--light mr-16 js-modal-close">Нет, в Питере</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--.js-modal Открыть модальное окно-->
+    </div>
+    <!--build:js ./js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
+    <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+    <!--script(src='bower/slick-carousel/slick/slick.js')-->
+    <!--script(src='bower/jquery.nicescroll/jquery.nicescroll.min.js')-->
+    <!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
+    <!--script(src="bower/ion.rangeSlider/js/ion.rangeSlider.js")-->
+    <!-- endbuild-->
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>

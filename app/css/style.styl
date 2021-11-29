@@ -1,0 +1,597 @@
+@import 'rupture'
+@import "variable/_function.styl"
+@import "variable/_helper.styl"
+@import "variable/_ie.styl"
+
+//@import "grid/grid.css"
+@import "grid/extends.styl"
+@import "grid/grid.styl"
+
+@import "variable/_default.styl"
+@import "variable/config/_grid.styl"
+
+@import "variable/config/_color.styl"
+@import "variable/config/_typography.styl"
+@import "variable/config/_btn.styl"
+@import "variable/config/_input.styl"
+@import "../module/**/*"
+
+
+body
+	@extend .type--main
+	font-family $v-font
+	color $main-text-color
+	line-height 1.4
+	letter-spacing 0.01em
+
+.main-cont
+	+below(1280px)
+		padding: 0 42px
+	+below(640px)
+		padding: 0 20px
+	center(1312px,10px)
+
+// animate top menu
+@keyframes slideInDown
+	from
+		transform: translate3d(0, -100%, 0)
+		visibility: visible;
+	to
+		transform: translate3d(0, 0, 0)
+
+.shrink
+	position fixed
+	top 0
+	left 0
+	background white
+	width 100%
+	margin 0
+	animation:  slideInDown  .8s 1 ease-in-out;
+	z-index 200
+	+below(1024px)
+		.nav-wrap
+			display block
+	.header-top-wrap
+		display none
+	.nav-logo
+		+below(640px)
+			width: 16px
+			margin-left: -10px
+			min-width 16px
+		flex(mid)
+		margin-right: 8px
+	.nav-list
+		display none
+	.auth-wrap
+		display none
+	.dropdown--shrink
+		.dropdown-current
+			f()
+			align-items center
+	.nav-shrink
+		display flex
+		width: 100%
+// animate top menu === end
+
+// modal
+.modal-layer
+	width: 100%
+	height: 100vh
+	position: fixed
+	z-index 1000
+	top 0
+	left 0
+	visibility: hidden
+	transition all .8s // duration for fade
+	opacity 0
+	&.active
+		visibility: visible
+		opacity 1
+		transition all .4s // duration for fade
+
+.modal-filter
+	position: absolute
+	top: 0
+	left: 0
+	background: #18191da1
+	width: 100%
+	height: 100vh
+	min-height 100vh
+
+.modal-wrap
+	position: fixed
+	width: 100%
+	height: 100%
+	overflow-y auto
+	flex(mid)
+
+.modal
+	+below(640px)
+		width: 100%
+		box-shadow 0 0 0
+	transform scale(.9) translateZ(0) translate3d(0, 0, 0)
+	will-change: transform, opacity;
+	backface-visibility: hidden
+	position: absolute
+	opacity 0
+	transition transform .6s, opacity .4s
+	max-width 400px
+	left -9999px
+	top -9999px
+	&.active
+		max-height 100%
+		opacity 1
+		transform scale(1) translateZ(0) translate3d(0, 0, 0)
+		position: relative
+		z-index 1000
+		left initial
+		top initial
+		will-change: transform, opacity
+	&.modal-hide-animation
+		transform scale(.9)
+		opacity 0
+		transition transform .6s, opacity .8s
+
+
+.modal-content
+	+below(640px)
+		height: 100%
+		padding: 20px
+		overflow-y scroll
+		width: 95%!important
+	margin: 20px auto
+	background: white
+	position: relative
+	padding: 32px
+	br(16px)
+
+.modal-close
+	+below(768px)
+		top 12px
+		right 12px
+	position: absolute
+	top: -32px
+	right: 20px
+	cp()
+	flex(mid)
+	z-index 10
+	&:hover
+		.icon
+			fill $mark
+	.icon
+		tr()
+		size 20px
+		fill white
+// modal === end
+
+
+// header
+.header-wrap
+	background: white
+	box-shadow: 0px 4px 8px rgba(102, 130, 185, 0.12);
+	z-index 50
+.header
+	+below(1200px)
+		height: 60px
+	height: 80px
+	flex(between)
+
+.logo
+	+below(640px)
+		width: 80px
+	margin-right: 5%
+.phone
+	+below(1200px)
+		margin-right: 0
+	+below(740px)
+		display none
+	font-weight: 700
+	font-size: 20px
+	margin: 0 5%
+	@extend .link
+
+
+.header-nav
+	+below(1024px)
+		display none
+	flex(between)
+	width: 18%
+
+.header-nav__el
+	@extend .link
+
+.header-cost
+	+below(640px)
+		font-size: 14px
+
+.header-msg
+	+above(1025px)
+		display none
+	f()
+	margin-left: -1px
+.header-msg__el
+	+below(1200px)
+		size 60px
+	size 80px
+	flex(mid)
+	border-left 1px solid $border-color
+	border-right 1px solid $border-color
+	tr()
+	background: white
+	margin-left: -1px
+	&:last-child
+		border-right 1px solid $border-color
+// header === end
+
+// slider menu
+.header-cart
+	+below(1024px)
+		margin-left: 12px
+		size 40px
+		padding: 4px
+		br(8px)
+		margin-right: -28px
+	+below(640px)
+		margin-right: -10px
+
+	padding: 10px 18px
+	background: $mark
+	margin-left auto
+	position relative
+	br(22px)
+	flex(mid)
+	tr()
+	cp()
+	&:hover
+		background: darken($mark,5)
+
+.header-cart-val
+	position absolute
+	br(12px)
+	background: $coral
+	color white
+	top -6px
+	right: -6px
+	padding: 2px 8px
+	font-size: 12px
+	font-weight: 700
+.head-toggle
+	cp()
+	.icon-close
+		display: none
+	&.active
+		.icon-close
+			display: block
+		.icon-open
+			display: none
+
+.slide-block
+	+below(480px)
+		width: 100%
+	position: fixed
+	width: 410px
+	top 0
+	tr(all)
+	height: 100%
+	z-index 100
+	background: white
+	&.active
+		transform translateX(0%)
+.slide-block--left
+	left 0
+	transform translateX(-100%)
+
+.slide-block--right
+	right 0
+	transform translateX(100%)
+
+.slide-nav__el
+	display  block
+
+.slide-block-wrap
+	padding: 24px
+// slider menu === end
+
+
+
+.item-get
+	+below(640px)
+		width: 130px
+	width: 155px
+	height: 44px
+
+// accordion
+.accordion
+	+below(640px)
+		width 100%
+	background: white
+	opacity: 0
+	left -9999px
+	visibility: hidden
+	position absolute
+	transform translateX(10px)
+	transition opacity 1.2s, transform .8s
+	&.active
+		transform translateX(0px)
+		visibility: visible
+		opacity: 1
+		left initial
+		position: static
+.accordion__el
+	border 1px solid #e5e5e5
+	margin-top: -1px
+	cp()
+	&:hover
+		.accordion__el-head-icon
+			&:before
+				content ''
+				background: $green
+			&:after
+				content ''
+				background: $green
+
+.accordion__el-head
+	+below(640px)
+		padding: 20px
+	padding: 30px 40px
+	flex(between)
+	color black
+	&.active
+		.accordion__el-head-text
+			color $green
+		.accordion__el-head-icon
+			&:after
+				content ''
+				transform rotate(45deg)
+			&:before
+				content ''
+				transform rotate(45deg)
+.accordion__el-head-text
+	+below(640px)
+		line-height: 1.6
+	@extend .type--md
+	width: 80%
+	font-weight: 700
+
+.accordion__el-head-icon
+	+below(640px)
+		size 16px
+	position: relative
+	size 24px
+	&:before
+		content ''
+		tr(all)
+		height: 2px
+		width: 100%
+		background: black
+		position: absolute
+		top calc(50% - 1px)
+	&:after
+		content ''
+		tr(all)
+		height: 100%
+		width: 2px
+		background: black
+		position: absolute
+		left calc(50% - 1px)
+
+.accordion__el-content
+	+below(640px)
+		padding:0 20px 20px 20px
+	padding: 0 40px 40px 40px
+	display: none
+	p
+		color $typePrimary
+		&:first-child
+			margin-top: 0
+		&:last-child
+			margin-bottom: 0
+
+
+// accordion === end
+
+// deliver
+.deliver-wrap
+	+below(640px)
+		fw()
+	f()
+	justify-content space-between
+.deliver-info
+	+below(1024px)
+		width: 45%
+	+below(640px)
+		width: 100%
+		margin-bottom: 24px
+	width: 28%
+.deliver-info__text
+	+below(640px)
+		margin-bottom: 24px
+	margin-bottom: 42px
+	color $typeSecondary
+//.deliver-pick
+.deliver-pick__el
+	f()
+	align-items center
+	margin-bottom: 22px
+	&:last-child
+		margin-bottom: 0
+.deliver-pick__el-color
+	round()
+	size 24px
+	margin-right: 16px
+.deliver-pick__el-text
+	font-weight 700
+	color black
+.deliver-map
+	+below(1024px)
+		width: 50%
+		padding: 22% 10%
+		min-height 420px
+	+below(640px)
+		min-height 230px
+		width: 100%
+	width: 66%
+	padding: 15% 10%
+.map-wrap
+	position relative
+	background: $grayLight
+
+.map-wrap--md
+	width: 100%
+	padding: 28% 10%
+	+below(640px)
+		min-height 230px
+.map
+	position absolute
+	top 0
+	left 0
+	width: 100%
+	height: 100%
+// deliver === end
+
+// soc-row
+.soc-row
+	f()
+
+.soc-row--mid
+	flex(mid)
+
+.soc-row--lg
+	.soc-row__el
+		+below(360px)
+			size 56px
+		size 72px
+.soc-row__el
+	round()
+	flex(mid)
+	tr(all)
+	margin-right: 16px
+	size 48px
+	background: #787775
+	&:last-child
+		margin-right: 0
+	.icon
+		fill white
+	&:hover
+		background: darken(#787775,10)
+.soc-row--monochrome
+	.soc-row__el
+		background: rgba(255,255,255,0.1)
+		&:hover
+			background: rgba(255,255,255,0.2)
+		.icon
+			fill white
+// soc-row === end
+
+// footer
+.footer
+	background: #383941
+	color #fff6
+	a
+		&:hover
+			color $mark
+
+//.main-cont
+.footer-top
+	+below(1024px)
+		padding: 32px 0
+		fw()
+	+below(768px)
+		grid-gap 20px
+	+below(640px)
+		fl()
+		align-items center
+		justify-content center
+	flex(between)
+	padding: 48px 0
+
+.footer-contact
+	+below(1024px)
+		margin-right:auto
+	+below(768px)
+		width: 45%
+		order 1
+	+below(640px)
+		width: 100%
+		order 2
+		flex(mid)
+		fl()
+	width: 25%
+.footer-phone
+	@extend .type--lg
+	font-weight 700
+	color white
+	display inline-block
+	margin-bottom: 12px
+	white-space nowrap
+.footer-scroll
+	+below(1280px)
+		margin-left: 20px
+	+below(768px)
+		order 2
+	+below(640px)
+		order 1
+		margin 0 0 32px 0
+	size 64px
+	min-width 64px
+	round()
+	flex(mid)
+	background: #ffffff1a
+	cp()
+	tr()
+	margin-left: 10%
+	&:hover
+		background: #ffffff26
+		.icon
+			transform translateY(-3px)
+	.icon
+		transform translateY(0)
+		tr()
+		fill white
+.footer-info
+	+below(768px)
+		margin: 0
+		order 3
+	+below(640px)
+		text-align center
+	margin-left auto
+
+.soc-row--footer
+	+below(768px)
+		margin: 0
+		order 4
+		f()
+		justify-content: flex-end
+	margin-left auto
+// footer === end
+
+.filter
+	position fixed
+	top 0
+	left -100%
+	width: 100%
+	height: 100%
+	background: #000000a3
+	z-index 60
+	opacity: 0
+	&.active
+		left 0
+		opacity: 1
+		transition opacity .4s
+
+// cart
+.cart
+	height: 100vh
+.cart-item__img
+	size 90px
+	br(12px)
+	object-fit cover
+	object-position center
+.cart-item
+	padding-bottom: 20px
+	margin-bottom: 20px
+	border-bottom 1px solid $border-color
+.cart-list
+	overflow: auto
+	flex-grow 1
+// cart === end

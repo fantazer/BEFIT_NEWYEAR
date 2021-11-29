@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<!--create by ANATOLY KUZNETSOV-->
+<!--contact mail:kuznecovs45@gmail.com skype:an_kuznetcov-->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <!--colors-tabs-->
+    <meta name="theme-color" content="#000" />
+    <meta name="msapplication-navbutton-color" content="#000" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <!--SEO-->
+    <title>Document</title>
+    <meta name="description" itemprop="description" content="" />
+    <!--build:css ./css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <!--endbuild-->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body id='header'>
+    <div class="page">
+        <!--block header-->
+        <div class="filter js-slide-block-close"></div>
+        <div class="header-wrap">
+            <div class="main-cont">
+                <div class="header">
+                    <a class="logo f f-mid" href="/">
+                        <img src="img/logo.svg" alt="" />
+                    </a>
+                    <div class="f f-mid cp js-modal lg__hide" data-modal="location">
+                        <svg class="icon icon--gray icon--24">
+                            <use xlink:href="#navigation"></use>
+                        </svg>
+                        <div class="type--main ml-10">Санкт-Петербург</div>
+                    </div>
+                    <a class="phone lg__hide" href="tel:8 (499) 110-12-15">8 (499) 110-12-15</a>
+                    <div class="header-nav">
+                        <a class="header-nav__el type--w500 js-scroll-to" href="#navFAQ">Вопрос - ответ</a>
+                        <a class="header-nav__el type--w500 js-scroll-to" href="#navDelivery">Доставка</a>
+                    </div>
+                    <div class="ml-a lg__show">
+                        <a class="header-msg__el modal-get" href="tel:8 (499) 110-12-15">
+                            <svg class="icon">
+                                <use xlink:href="#phone"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="head-toggle lg__show header-msg__el js-slide-block-toggle" data-menu="menu">
+                        <svg class="icon">
+                            <use xlink:href="#menu"></use>
+                        </svg>
+                    </div>
+                    <div class="header-cart js-slide-block-toggle" data-menu="cart">
+                        <svg class="icon icon--white icon--24">
+                            <use xlink:href="#cart"></use>
+                        </svg>
+                        <div class="type--white ml-10 type--w500 lg__hide">Корзина</div>
+                        <div class="header-cart-val">12</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu-->
+        <div class="slide-block slide-block--right slide-block--menu" data-menu="menu">
+            <div class="js-accordion p-24">
+                <div class="f f-between mb-24">
+                    <img src="img/logo.svg" alt="" />
+                    <svg class="icon icon--24 icon-h--mark cp tr js-slide-block-close">
+                        <use xlink:href="#close"></use>
+                    </svg>
+                </div>
+                <div class="mb-32">
+                    <a class="type--w500 mb-12 db type--18 js-slide-block-close js-scroll-to" href="#navFAQ">Вопрос - ответ</a>
+                    <a class="type--w500 mb-12 db type--18 js-slide-block-close js-scroll-to" href="#navDelivery">Доставка</a>
+                </div>
+                <div class="f f-aic cp mb-24">
+                    <svg class="icon icon--gray icon--24">
+                        <use xlink:href="#navigation"></use>
+                    </svg>
+                    <div class="type--main ml-10">Санкт-Петербург</div>
+                </div>
+                <a class="type--w700 type--20 mb-24 db" href="tel:8 (499) 110-12-15">8 (499) 110-12-15</a>
+                <div class="soc-row">
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-inst"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-vk"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-fb"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu === end-->
+        <!-- mobile menu-->
+        <div class="slide-block slide-block--right slide-block--menu" data-menu="cart">
+            <div class="js-accordion">
+                <div class="f f-column cart">
+                    <div class="f f-between mb-12 p-24 sm__psh-10">
+                        <div class="type--w700 type--24">5 блюд</div>
+                        <svg class="icon icon--24 icon-h--mark cp tr js-slide-block-close">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <div class="cart-list psh-24 sm__psh-10 scroll-template">
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="f f-aic">
+                                <img class="cart-item__img mr-24" src="img/item.jpg" alt="" />
+                                <div class="type--w700 type--14">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                            </div>
+                            <div class="f f-aic">
+                                <div class="type--24 type--w700">699 р</div>
+                                <div class="type--primary ml-12">450 г</div>
+                                <div class="f f-aic f-jcsb js-incr-wrap ml-a">
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--minus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="type--w700 msh-16">
+                                        <span class="js-incr-val">1</span>
+                                        <span>шт</span>
+                                    </div>
+                                    <div class="f f-mid icon--44 br-round bor bor--border js-inc-nav js-inc-nav--plus cp bor-h--mark tr">
+                                        <svg class="icon icon--mark">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-get bg--mark p-16 cp tr bg-h--greenDark">
+                        <div class="type--w700 type--white type--32 type--center sm__type--18">Заказать — 16 278 р</div>
+                    </div>
+                </div>
+            </div>
+            <!-- mobile menu === end-->
+        </div>
+        <!--block header end-->
+        <div class="content">
+            <div class="main-cont">
+                <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
+                <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
+                <div class="f f-col f-aifs">
+                    <div class="btn btn--md btn--mark mb-12 js-modal" data-modal="order">Заявка | data-modal="code "</div>
+                    <div class="btn btn--md btn--mark mb-12 js-modal" data-modal="order">Заявка | data-modal="code "</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--block footer-->
+    <div class="footer">
+        <!-- footer top-->
+        <div class="main-cont">
+            <div class="footer-top">
+                <div class="footer-contact">
+                    <a class="footer-phone" href="tel:+7 (925) 907-35-12">+7 (925) 907-35-12</a>
+                    <div class="footer-work">Ежедневно: с 09-00 до 21-00</div>
+                </div>
+                <div class="soc-row soc-row--monochrome soc-row--footer">
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-inst"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-vk"></use>
+                        </svg>
+                    </a>
+                    <a class="soc-row__el" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#soc-fb"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer-info">
+                    <div class="footer-address__info mb-16">© 2020, Letbefit, все права защищены</div>
+                    <a class="link--mark" href="#">Политика конфиденциальности</a>
+                </div>
+                <a class="js-scroll-to footer-scroll" href="#header">
+                    <svg class="icon">
+                        <use xlink:href="#arrow-up"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <!-- footer top === end-->
+    </div>
+    <!--block footer end-->
+    <!-- init-->
+    <div class="modal-layer">
+        <div class="modal-filter"></div>
+        <div class="modal-wrap">
+            <div class="modal" data-modal="location">
+                <div class="modal-content">
+                    <div class="modal-close js-modal-close">
+                        <svg class="icon">
+                            <use xlink:href="#close"></use>
+                        </svg>
+                    </div>
+                    <div class="type--lg type--w700 mb-16">Вы в Москве?</div>
+                    <div class="f f-aic">
+                        <div class="btn--sm btn--mark mr-16 js-modal-close">Да</div>
+                        <div class="btn--sm btn--light mr-16 js-modal-close">Нет, в Питере</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--.js-modal Открыть модальное окно-->
+    <div class="cookie">
+        <!-- to show add class .cookie + .cookie--active-->
+        <div class="main-cont">
+            <div class="cookie-wrap">
+                <div class="cookie-text">Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете
+                    <a class="link--mark" href="#">условия обработки</a>&nbsp;персональных данных</div>
+                <svg class="icon icon-close">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <!--build:js ./js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
+    <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+    <!--script(src='bower/slick-carousel/slick/slick.js')-->
+    <!--script(src='bower/jquery.nicescroll/jquery.nicescroll.min.js')-->
+    <!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
+    <!--script(src="bower/ion.rangeSlider/js/ion.rangeSlider.js")-->
+    <!-- endbuild-->
+    <script src="./js/add-on.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/script-edit.js"></script>
+</body>
+
+</html>
