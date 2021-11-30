@@ -31,6 +31,17 @@ body
 		padding: 0 20px
 	center(1312px,10px)
 
+.page
+	f()
+	fl()
+	min-height 100vh
+
+.content
+	flex-grow 1
+	position relative
+	overflow: hidden
+
+
 // animate top menu
 @keyframes slideInDown
 	from
@@ -181,8 +192,7 @@ body
 		width: 80px
 	margin-right: 5%
 .phone
-	+below(1200px)
-		margin-right: 0
+
 	+below(740px)
 		display none
 	font-weight: 700
@@ -190,15 +200,14 @@ body
 	margin: 0 5%
 	@extend .link
 
-
 .header-nav
 	+below(1024px)
 		display none
 	flex(between)
-	width: 18%
 
 .header-nav__el
 	@extend .link
+	margin-right: 20px
 
 .header-cost
 	+below(640px)
@@ -233,7 +242,6 @@ body
 		margin-right: -28px
 	+below(640px)
 		margin-right: -10px
-
 	padding: 10px 18px
 	background: $mark
 	margin-left auto
@@ -244,7 +252,12 @@ body
 	cp()
 	&:hover
 		background: darken($mark,5)
-
+	&.dissable
+		background: $gray
+		&:hover
+			pointer-events none
+		.header-cart-val
+			display none
 .header-cart-val
 	position absolute
 	br(12px)
@@ -595,3 +608,87 @@ body
 	overflow: auto
 	flex-grow 1
 // cart === end
+
+// tab
+.tab
+	f()
+	border-bottom 1px solid $border-color
+
+.tab__el
+	+below(640px)
+		padding: 10px 10px 12px 10px
+	flex-grow 1
+	text-align center
+	font-weight: 500
+	padding: 20px 20px 16px 20px
+	color black
+	border-bottom 4px solid transparent
+	tr()
+	cp()
+	width: 100%
+	&.active
+		border-bottom 4px solid $mark
+// tab === end
+
+.contract-total
+	flex(between)
+	border-bottom 1px dashed $border-color
+	padding: 12px 0
+	&:last-child
+		border 0
+
+.contract-total__val
+	+below(640px)
+		font-size: 14px
+	width: 50%
+	margin-right: 10px
+
+.contract-footer
+	+below(640px)
+		padding: 32px 20px
+		fw()
+		width: 100%
+	border-top 1px dashed $border-color
+	padding: 48px 48px 56px 48px
+	flex(between)
+
+.contract-footer__text
+	+below(640px)
+		width: 100%
+		order 2
+		margin-top: 16px
+	width: 55%
+	color black
+
+.soc-row__el--wp
+	background: #48C95F
+	&:hover
+		background: darken(#48C95F,10)
+
+.soc-row__el--telegram
+	background: #2F89CE
+	&:hover
+		background: darken(#2F89CE,10)
+
+.soc-row__el--viber
+	background: #7C509A
+	&:hover
+		background: darken(#7C509A,10)
+
+.soc-row__el--instagram
+	background: linear-gradient(43.94deg, #EEA054 16.16%, #D64763 50.11%, #B62A99 83.68%);
+
+.soc-row__el--fb
+	background: #232894
+	&:hover
+		background: darken(#232894,10)
+
+.soc-row__el--twitter
+	background: #00C2FF
+	&:hover
+		background: darken(#00C2FF,10)
+
+.soc-row__el--vk
+	background: #337FC5
+	&:hover
+		background: darken(#337FC5,10)

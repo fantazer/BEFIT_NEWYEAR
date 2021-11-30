@@ -279,89 +279,240 @@
             <!-- mobile menu === end-->
         </div>
         <!--block header end-->
-        <div class="content">
+        <div class="content psv-100 bg--fieldBackground md__p-0 sm__psv-0">
+            <div class="wmax-820 ml-a mr-a">
+                <div class="bg--white br-12 md__br-0 sm__br-0">
+                    <div class="psh-40 psv-20 sm__psh-20">
+                        <div class="type--xl type--w700 mb-48">Оформление заказа</div>
+                        <div class="input-cont" data-test="orderAddress">
+                            <div class="input-row">
+                                <input class="input input-mask--phone" type="text" data-placeholder="Телефон" />
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two" data-test="orderAuthInfo">
+                            <div class="input-row input-row--validate input-row--error" data-test="orderName">
+                                <input class="input" type="text" data-placeholder="Имя и фамилия" />
+                                <div class="input-msg">В данных ошибка</div>
+                                <svg class="icon icon-validate-false">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                                <svg class="icon icon-validate-true">
+                                    <use xlink:href="#checked"></use>
+                                </svg>
+                            </div>
+                            <div class="input-row input-row--validate" data-test="orderMail">
+                                <input class="input" type="text" data-placeholder="Email (необязательно)" />
+                                <div class="input-msg">Ошибок нет</div>
+                                <svg class="icon icon-validate-false">
+                                    <use xlink:href="#close"></use>
+                                </svg>
+                                <svg class="icon icon-validate-true">
+                                    <use xlink:href="#checked"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="type--lg type--w700 mb-32">Доставка</div>
+                        <div class="input-cont" data-test="orderAddress">
+                            <div class="input-row">
+                                <input class="input" type="text" data-placeholder="Адрес" />
+                            </div>
+                        </div>
+                        <div class="input-cont input-cont--two mb-32">
+                            <div class="input-row">
+                                <div class="dropdown" data-test="orderDay">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-title">Начало</div>
+                                        <div class="dropdown-current__val">24 сентября</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="1">25 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="2">26 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="3">27 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="1">25 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="2">26 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="3">27 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="1">25 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="2">26 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="3">27 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="1">25 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="2">26 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="3">27 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="1">25 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="2">26 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="3">27 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="1">25 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="2">26 сентября</div>
+                                        <div class="dropdown-menu__el" data-value="3">27 сентября</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="dropdown" data-test="orderTime">
+                                    <input type="hidden" name="name" value="0" />
+                                    <div class="dropdown-current">
+                                        <div class="dropdown-title">Время</div>
+                                        <div class="dropdown-current__val">10:00 - 11:00</div>
+                                        <svg class="icon">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-menu">
+                                        <div class="dropdown-menu__el" data-value="1">11:00 - 12:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">13:00 - 14:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">14:00 - 15:00</div>
+                                        <div class="dropdown-menu__el" data-value="3">16:00 - 17:00</div>
+                                        <div class="dropdown-menu__el" data-value="1">11:00 - 12:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">13:00 - 14:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">14:00 - 15:00</div>
+                                        <div class="dropdown-menu__el" data-value="3">16:00 - 17:00</div>
+                                        <div class="dropdown-menu__el" data-value="1">11:00 - 12:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">13:00 - 14:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">14:00 - 15:00</div>
+                                        <div class="dropdown-menu__el" data-value="3">16:00 - 17:00</div>
+                                        <div class="dropdown-menu__el" data-value="1">11:00 - 12:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">13:00 - 14:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">14:00 - 15:00</div>
+                                        <div class="dropdown-menu__el" data-value="3">16:00 - 17:00</div>
+                                        <div class="dropdown-menu__el" data-value="1">11:00 - 12:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">13:00 - 14:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">14:00 - 15:00</div>
+                                        <div class="dropdown-menu__el" data-value="3">16:00 - 17:00</div>
+                                        <div class="dropdown-menu__el" data-value="1">11:00 - 12:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">13:00 - 14:00</div>
+                                        <div class="dropdown-menu__el" data-value="2">14:00 - 15:00</div>
+                                        <div class="dropdown-menu__el" data-value="3">16:00 - 17:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type--lg type--w700 mb-24">Оплата</div>
+                        <div class="tab mb-32 js-tick-cont">
+                            <div class="tab__el js-tick active" data-test="orderCash">Наличными</div>
+                            <div class="tab__el js-tick" data-test="orderCard">Картой</div>
+                            <div class="tab__el js-tick">Apple Pay</div>
+                        </div>
+                        <div class="contract-total-wrap mb-32" data-test="orderTotal">
+                            <div class="contract-total" data-test="orderTotalItem">
+                                <div class="w50 mr-10 type--secondary">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                                <div class="type--black">
+                                    <span class="mr-12">2шт</span>
+                                    <span>6300 руб</span>
+                                </div>
+                            </div>
+                            <div class="contract-total" data-test="orderTotalItem">
+                                <div class="w50 mr-10 type--secondary">Balance</div>
+                                <div class="type--black">8100 руб</div>
+                            </div>
+                            <div class="contract-total" data-test="orderTotalItemSale">
+                                <div class="w50 mr-10 type--secondary">Скидка</div>
+                                <div class="type--mark">+1200 руб</div>
+                            </div>
+                            <div class="contract-total" data-test="orderTotalItemBonus">
+                                <div class="w50 mr-10 type--secondary">Будет начислено бонусов</div>
+                                <div class="type--mark">+500</div>
+                            </div>
+                            <div class="contract-total" data-test="orderTotalCost">
+                                <div class="w50 mr-10 type--secondary">Итого</div>
+                                <div class="type--w700 type--md">6300 руб</div>
+                            </div>
+                        </div>
+                        <div class="input-cont" data-test="orderCheckComment">
+                            <div class="input-row">
+                                <label class="check-el js-switch" data-item="isComment">
+                                    <div class="style-label style-label--checkbox">
+                                        <input class="style-input" type="checkbox" />
+                                        <div class="style-input-element">
+                                            <svg class="icon">
+                                                <use xlink:href="#checked"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="style-input-text">Добавить комментарий к заказу</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="input-cont hidden js-switch-cont" data-item="isComment" data-test="orderCommentValue">
+                            <div class="input-cont">
+                                <div class="input-row">
+                                    <textarea class="input" name="text" cols="30" rows="4" data-placeholder="Комментарий"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contract-footer">
+                        <div class="contract-footer__text">Нажимая кнопку “Оформить” я принимаю условия условия
+                            <a href="#" class="link--mark">передачи информации</a>
+                        </div>
+                        <div class="btn--md btn--mark btn--mobile" data-test="orderFinish">Оформить</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="footer">
+            <!-- footer top-->
             <div class="main-cont">
-                <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
-                <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
-                <div class="f f-col f-aifs">
-                    <div class="btn btn--md btn--mark mb-12 js-modal" data-modal="order">Заявка | data-modal="code "</div>
-                    <div class="btn btn--md btn--mark mb-12 js-modal" data-modal="order">Заявка | data-modal="code "</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--block footer-->
-    <div class="footer">
-        <!-- footer top-->
-        <div class="main-cont">
-            <div class="footer-top">
-                <div class="footer-contact">
-                    <a class="footer-phone" href="tel:+7 (925) 907-35-12">+7 (925) 907-35-12</a>
-                    <div class="footer-work">Ежедневно: с 09-00 до 21-00</div>
-                </div>
-                <div class="soc-row soc-row--monochrome soc-row--footer">
-                    <a class="soc-row__el" href="#">
-                        <svg class="icon">
-                            <use xlink:href="#soc-inst"></use>
-                        </svg>
-                    </a>
-                    <a class="soc-row__el" href="#">
-                        <svg class="icon">
-                            <use xlink:href="#soc-vk"></use>
-                        </svg>
-                    </a>
-                    <a class="soc-row__el" href="#">
-                        <svg class="icon">
-                            <use xlink:href="#soc-fb"></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="footer-info">
-                    <div class="footer-address__info mb-16">© 2020, Letbefit, все права защищены</div>
-                    <a class="link--mark" href="#">Политика конфиденциальности</a>
-                </div>
-                <a class="js-scroll-to footer-scroll" href="#header">
-                    <svg class="icon">
-                        <use xlink:href="#arrow-up"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <!-- footer top === end-->
-    </div>
-    <!--block footer end-->
-    <!-- init-->
-    <div class="modal-layer">
-        <div class="modal-filter"></div>
-        <div class="modal-wrap">
-            <div class="modal" data-modal="location">
-                <div class="modal-content">
-                    <div class="modal-close js-modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
+                <div class="footer-top">
+                    <div class="footer-contact">
+                        <a class="footer-phone" href="tel:+7 (925) 907-35-12">+7 (925) 907-35-12</a>
+                        <div class="footer-work">Ежедневно: с 09-00 до 21-00</div>
                     </div>
-                    <div class="type--lg type--w700 mb-16">Вы в Москве?</div>
-                    <div class="f f-aic">
-                        <div class="btn--sm btn--mark mr-16 js-modal-close">Да</div>
-                        <div class="btn--sm btn--light mr-16 js-modal-close">Нет, в Питере</div>
+                    <div class="soc-row soc-row--monochrome soc-row--footer">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-inst"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-vk"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-fb"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-info">
+                        <div class="footer-address__info mb-16">© 2020, Letbefit, все права защищены</div>
+                        <a class="link--mark" href="#">Политика конфиденциальности</a>
+                    </div>
+                    <a class="js-scroll-to footer-scroll" href="#header">
+                        <svg class="icon">
+                            <use xlink:href="#arrow-up"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- footer top === end-->
+        </div>
+        <!--block footer end-->
+        <!-- init-->
+        <div class="modal-layer">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <div class="modal" data-modal="location">
+                    <div class="modal-content">
+                        <div class="modal-close js-modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="type--lg type--w700 mb-16">Вы в Москве?</div>
+                        <div class="f f-aic">
+                            <div class="btn--sm btn--mark mr-16 js-modal-close">Да</div>
+                            <div class="btn--sm btn--light mr-16 js-modal-close">Нет, в Питере</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--.js-modal Открыть модальное окно-->
-    <div class="cookie">
-        <!-- to show add class .cookie + .cookie--active-->
-        <div class="main-cont">
-            <div class="cookie-wrap">
-                <div class="cookie-text">Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете
-                    <a class="link--mark" href="#">условия обработки</a>&nbsp;персональных данных</div>
-                <svg class="icon icon-close">
-                    <use xlink:href="#close"></use>
-                </svg>
-            </div>
-        </div>
+        <!--.js-modal Открыть модальное окно-->
     </div>
     <script src="./js/combined.js"></script>
     <script src="./js/add-on.js"></script>

@@ -15,7 +15,9 @@
     <!--SEO-->
     <title>Document</title>
     <meta name="description" itemprop="description" content="" />
-    <link rel="stylesheet" href="./css/vendor.css">
+    <!--build:css ./css/vendor.css-->
+    <link rel="stylesheet" href="bower/normalize.css/normalize.css" />
+    <!--endbuild-->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -279,91 +281,136 @@
             <!-- mobile menu === end-->
         </div>
         <!--block header end-->
-        <div class="content">
+        <div class="content psv-100 bg--fieldBackground md__p-0 sm__psv-0">
+            <div class="wmax-820 ml-a mr-a">
+                <div class="bg--white br-12 md__br-0 sm__br-0">
+                    <div class="psh-40 psv-20 sm__psh-20">
+                        <img class="mb-32 mt-32 ml-a mr-a" src="img/smile-happy.png" alt="" />
+                        <div class="type--w700 type--xl type--center mb-12">Спасибо за заказ</div>
+                        <div class="type--md type--center type--primary mb-48">Оператор свяжеться с Вами в ближайшее время</div>
+                        <div class="contract-total-wrap mb-32" data-test="orderTotal">
+                            <div class="contract-total" data-test="orderTotalItem">
+                                <div class="contract-total__val type--secondary">Куриная котлета с зеленой гречей в сливочно-ореховом соусе</div>
+                                <div class="type--black">
+                                    <span class="mr-12">2шт</span>
+                                    <span>6300 руб</span>
+                                </div>
+                            </div>
+                            <div class="contract-total" data-test="orderTotalItem">
+                                <div class="w50 mr-10 type--secondary">Balance</div>
+                                <div class="type--black">8100 руб</div>
+                            </div>
+                            <div class="contract-total" data-test="orderTotalItemSale">
+                                <div class="w50 mr-10 type--secondary">Скидка</div>
+                                <div class="type--mark">+1200 руб</div>
+                            </div>
+                            <div class="contract-total" data-test="orderTotalItemBonus">
+                                <div class="w50 mr-10 type--secondary">Будет начислено бонусов</div>
+                                <div class="type--mark">+500</div>
+                            </div>
+                            <div class="contract-total" data-test="orderTotalCost">
+                                <div class="w50 mr-10 type--lg type--w700">Итого</div>
+                                <div class="type--w700 type--md">6300 руб</div>
+                            </div>
+                        </div>
+                        <div class="f f-jcc mb-24">
+                            <a class="btn--md btn--mark btn--mobile" href="#">Перейти на сайт BeFit</a>
+                        </div>
+                    </div>
+                    <div class="bor bor-t bor--border p-32">
+                        <div class="type--md type--w700 type--center mb-24">Следите за нами в социальных сетях</div>
+                        <div class="soc-row soc-row--mid soc-row--lg mb-24">
+                            <a class="soc-row__el soc-row__el--vk" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-vk"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el soc-row__el--fb" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-fb"></use>
+                                </svg>
+                            </a>
+                            <a class="soc-row__el soc-row__el--instagram" href="#">
+                                <svg class="icon">
+                                    <use xlink:href="#soc-inst"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--block footer-->
+        <div class="footer">
+            <!-- footer top-->
             <div class="main-cont">
-                <p>Чтобы вызвать нужное окно добавь на элемент класс .modal-get и data-modal="имя окна"</p>
-                <p>Чтобы добавить метод закрытия окна по клику на элемент добавиь класс .modal-send</p>
-                <div class="f f-col f-aifs">
-                    <div class="btn btn--md btn--mark mb-12 js-modal" data-modal="order">Заявка | data-modal="code "</div>
-                    <div class="btn btn--md btn--mark mb-12 js-modal" data-modal="order">Заявка | data-modal="code "</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--block footer-->
-    <div class="footer">
-        <!-- footer top-->
-        <div class="main-cont">
-            <div class="footer-top">
-                <div class="footer-contact">
-                    <a class="footer-phone" href="tel:+7 (925) 907-35-12">+7 (925) 907-35-12</a>
-                    <div class="footer-work">Ежедневно: с 09-00 до 21-00</div>
-                </div>
-                <div class="soc-row soc-row--monochrome soc-row--footer">
-                    <a class="soc-row__el" href="#">
-                        <svg class="icon">
-                            <use xlink:href="#soc-inst"></use>
-                        </svg>
-                    </a>
-                    <a class="soc-row__el" href="#">
-                        <svg class="icon">
-                            <use xlink:href="#soc-vk"></use>
-                        </svg>
-                    </a>
-                    <a class="soc-row__el" href="#">
-                        <svg class="icon">
-                            <use xlink:href="#soc-fb"></use>
-                        </svg>
-                    </a>
-                </div>
-                <div class="footer-info">
-                    <div class="footer-address__info mb-16">© 2020, Letbefit, все права защищены</div>
-                    <a class="link--mark" href="#">Политика конфиденциальности</a>
-                </div>
-                <a class="js-scroll-to footer-scroll" href="#header">
-                    <svg class="icon">
-                        <use xlink:href="#arrow-up"></use>
-                    </svg>
-                </a>
-            </div>
-        </div>
-        <!-- footer top === end-->
-    </div>
-    <!--block footer end-->
-    <!-- init-->
-    <div class="modal-layer">
-        <div class="modal-filter"></div>
-        <div class="modal-wrap">
-            <div class="modal" data-modal="location">
-                <div class="modal-content">
-                    <div class="modal-close js-modal-close">
-                        <svg class="icon">
-                            <use xlink:href="#close"></use>
-                        </svg>
+                <div class="footer-top">
+                    <div class="footer-contact">
+                        <a class="footer-phone" href="tel:+7 (925) 907-35-12">+7 (925) 907-35-12</a>
+                        <div class="footer-work">Ежедневно: с 09-00 до 21-00</div>
                     </div>
-                    <div class="type--lg type--w700 mb-16">Вы в Москве?</div>
-                    <div class="f f-aic">
-                        <div class="btn--sm btn--mark mr-16 js-modal-close">Да</div>
-                        <div class="btn--sm btn--light mr-16 js-modal-close">Нет, в Питере</div>
+                    <div class="soc-row soc-row--monochrome soc-row--footer">
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-inst"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-vk"></use>
+                            </svg>
+                        </a>
+                        <a class="soc-row__el" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#soc-fb"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="footer-info">
+                        <div class="footer-address__info mb-16">© 2020, Letbefit, все права защищены</div>
+                        <a class="link--mark" href="#">Политика конфиденциальности</a>
+                    </div>
+                    <a class="js-scroll-to footer-scroll" href="#header">
+                        <svg class="icon">
+                            <use xlink:href="#arrow-up"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <!-- footer top === end-->
+        </div>
+        <!--block footer end-->
+        <!-- init-->
+        <div class="modal-layer">
+            <div class="modal-filter"></div>
+            <div class="modal-wrap">
+                <div class="modal" data-modal="location">
+                    <div class="modal-content">
+                        <div class="modal-close js-modal-close">
+                            <svg class="icon">
+                                <use xlink:href="#close"></use>
+                            </svg>
+                        </div>
+                        <div class="type--lg type--w700 mb-16">Вы в Москве?</div>
+                        <div class="f f-aic">
+                            <div class="btn--sm btn--mark mr-16 js-modal-close">Да</div>
+                            <div class="btn--sm btn--light mr-16 js-modal-close">Нет, в Питере</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!--.js-modal Открыть модальное окно-->
     </div>
-    <!--.js-modal Открыть модальное окно-->
-    <div class="cookie">
-        <!-- to show add class .cookie + .cookie--active-->
-        <div class="main-cont">
-            <div class="cookie-wrap">
-                <div class="cookie-text">Мы используем cookies для быстрой и удобной работы сайта. Продолжая пользоваться сайтом, вы принимаете
-                    <a class="link--mark" href="#">условия обработки</a>&nbsp;персональных данных</div>
-                <svg class="icon icon-close">
-                    <use xlink:href="#close"></use>
-                </svg>
-            </div>
-        </div>
-    </div>
-    <script src="./js/combined.js"></script>
+    <!--build:js ./js/combined.js-->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="bower/jquery-mask-plugin/dist/jquery.mask.js"></script>
+    <script src="bower/page-scroll-to-id/jquery.malihu.PageScroll2id.js"></script>
+    <!--script(src='bower/slick-carousel/slick/slick.js')-->
+    <!--script(src='bower/jquery.nicescroll/jquery.nicescroll.min.js')-->
+    <!--script(src='bower/jquery-nice-select/js/jquery.nice-select.min.js')-->
+    <!--script(src="bower/ion.rangeSlider/js/ion.rangeSlider.js")-->
+    <!-- endbuild-->
     <script src="./js/add-on.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/script-edit.js"></script>

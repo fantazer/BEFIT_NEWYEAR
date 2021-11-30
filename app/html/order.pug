@@ -1,0 +1,99 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.psv-100.bg--fieldBackground.md__p-0.sm__psv-0
+		.wmax-820.ml-a.mr-a
+			.bg--white.br-12.md__br-0.sm__br-0
+				.psh-40.psv-20.sm__psh-20
+					.type--xl.type--w700.mb-48 Оформление заказа
+					.input-cont(data-test="orderAddress")
+						.input-row
+							input(type="text" data-placeholder="Телефон" class="input input-mask--phone")
+					.input-cont.input-cont--two(data-test="orderAuthInfo")
+						.input-row.input-row--validate.input-row--error(data-test="orderName")
+							input(type="text" data-placeholder="Имя и фамилия" class="input")
+							.input-msg В данных ошибка
+							+icon("close","icon icon-validate-false")
+							+icon("checked","icon icon-validate-true")
+						.input-row.input-row--validate(data-test="orderMail")
+							input(type="text" data-placeholder="Email (необязательно)" class="input")
+							.input-msg Ошибок нет
+							+icon("close","icon icon-validate-false")
+							+icon("checked","icon icon-validate-true")
+
+					.type--lg.type--w700.mb-32 Доставка
+					.input-cont(data-test="orderAddress")
+						.input-row
+							input(type="text" data-placeholder="Адрес" class="input")
+					.input-cont.input-cont--two.mb-32
+						.input-row
+							.dropdown(data-test="orderDay")
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-title Начало
+									.dropdown-current__val 24 сентября
+									+icon("arrow-down","icon")
+								.dropdown-menu
+									- for (var i=0;i<6;i++)
+										.dropdown-menu__el(data-value="1") 25 сентября
+										.dropdown-menu__el(data-value="2") 26 сентября
+										.dropdown-menu__el(data-value="3") 27 сентября
+						.input-row
+							.dropdown(data-test="orderTime")
+								input(type="hidden" name="name" value="0")
+								.dropdown-current
+									.dropdown-title Время
+									.dropdown-current__val 10:00 - 11:00
+									+icon("arrow-down","icon")
+								.dropdown-menu
+									- for (var i=0;i<6;i++)
+										.dropdown-menu__el(data-value="1") 11:00 - 12:00
+										.dropdown-menu__el(data-value="2") 13:00 - 14:00
+										.dropdown-menu__el(data-value="2") 14:00 - 15:00
+										.dropdown-menu__el(data-value="3") 16:00 - 17:00
+					.type--lg.type--w700.mb-24 Оплата
+					.tab.mb-32.js-tick-cont
+						.tab__el.js-tick.active(data-test="orderCash") Наличными
+						.tab__el.js-tick(data-test="orderCard") Картой
+						.tab__el.js-tick Apple Pay
+
+					.contract-total-wrap.mb-32(data-test="orderTotal")
+						.contract-total(data-test="orderTotalItem")
+							.w50.mr-10.type--secondary Куриная котлета с зеленой гречей в сливочно-ореховом соусе
+							.type--black
+								span.mr-12 2шт
+								span 6300 руб
+						.contract-total(data-test="orderTotalItem")
+							.w50.mr-10.type--secondary Balance
+							.type--black 8100 руб
+						.contract-total(data-test="orderTotalItemSale")
+							.w50.mr-10.type--secondary Скидка
+							.type--mark +1200 руб
+						.contract-total(data-test="orderTotalItemBonus")
+							.w50.mr-10.type--secondary Будет начислено бонусов
+							.type--mark +500
+						.contract-total(data-test="orderTotalCost")
+							.w50.mr-10.type--secondary Итого
+							.type--w700.type--md 6300 руб
+					.input-cont(data-test="orderCheckComment")
+						.input-row
+							label.check-el.js-switch(data-item="isComment")
+								.style-label.style-label--checkbox
+									input(type="checkbox" ).style-input
+									.style-input-element
+										+icon("checked","icon")
+									.style-input-text Добавить комментарий к заказу
+
+					.input-cont.hidden.js-switch-cont(data-item="isComment" data-test="orderCommentValue")
+						.input-cont
+							.input-row
+								textarea(name="text", cols="30", rows="4" class="input" data-placeholder="Комментарий")
+
+				.contract-footer
+					.contract-footer__text Нажимая кнопку “Оформить” я принимаю условия условия <a href="#" class="link--mark">передачи информации</a>
+					.btn--md.btn--mark.btn--mobile(data-test="orderFinish") Оформить
+	+footer()
+	+modal()
+include ./block_html/_script.pug

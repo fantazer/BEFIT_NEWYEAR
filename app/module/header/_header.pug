@@ -24,9 +24,11 @@ mixin header()
 				.head-toggle.lg__show.header-msg__el.js-slide-block-toggle(data-menu="menu")
 					+icon("menu","icon")
 				.header-cart.js-slide-block-toggle(data-menu="cart")
+					//На странице оформления добавь класс .disable и удали  .js-slide-block-toggle
 					+icon("cart","icon icon--white icon--24")
 					.type--white.ml-10.type--w500.lg__hide Корзина
 					.header-cart-val 12
+
 	// mobile menu
 	.slide-block.slide-block--right.slide-block--menu(data-menu="menu")
 		.js-accordion.p-24

@@ -148,7 +148,8 @@ $(document).ready(function () {
 	body.on('click', '.js-switch', function (e) {
 		if (e.target.className != 'style-input') {
 			var typeItem = $(this).data("item");
-			if ($(this).closest('.js-switch-wrap').length < 0) {
+			var hasParent = $(this).closest('.js-switch-wrap').length
+			if (hasParent < 1) {
 				var groupItem = $(this).data("group");
 				var selector = $('.js-switch[data-group=' + groupItem + ']');
 				var size = selector.size()
@@ -156,9 +157,11 @@ $(document).ready(function () {
 					$(this).removeClass("active");
 				});
 				$('.js-switch-cont').each(function () {
-					if ($(this).data("group") === groupItem) {
+					var hasParentInner = $(this).closest('.js-switch-wrap').length
+					if ($(this).data("group") === groupItem && $(this).data("group") != undefined) {
+						console.log('inner');
 						if ($(this).data("item") === typeItem) {
-							if (size === 0) {
+							if (size === 1) {
 								$(this).toggleClass("hidden")
 							} else {
 								$(this).removeClass("hidden")
@@ -166,11 +169,17 @@ $(document).ready(function () {
 						} else {
 							$(this).addClass("hidden");
 						}
+					} else {
+						if ($(this).data("item") === typeItem) {
+							$(this).toggleClass("hidden");
+						}
 					}
 				});
 			} else {
 				var parent = $(this).closest('.js-switch-wrap');
-				parent.find('.js-switch').removeClass('active')
+				parent.find('.js-switch').filter(function() {
+						return $(this).closest('.js-switch-wrap').not(parent).length < 1
+				}).removeClass('active')
 				parent.find('.js-switch-cont').each(function () {
 					if ($(this).data("item") === typeItem) {
 						$(this).removeClass("hidden")
@@ -305,6 +314,82 @@ $(document).ready(function () {
 		hideSlideMenu();
 	});
 	// slide menu === end
+
+	// animate placeholder
+	$('.input').each(function(){
+		var current = $(this);
+		if(current.data('placeholder')){
+		var dataString = "<span class='input-placeholder-val'>"+current.data('placeholder')+"</span>";
+			current.after(dataString);
+			if ($(this).val()){
+				$(this).attr('data-empty', !this.value);
+			}
+		}
+	});
+
+	$('.input').on('input', function (e) {
+		$(e.currentTarget).attr('data-empty', !e.currentTarget.value);
+	});
+
+	$('.input-placeholder-val').click(function(){
+		$(this).parent().find('.input').focus(); //найти Input и повесить focus
+	});
+	// animate placeholder === end
+
+	// phone mask
+	var isFieldStart = true;
+	var phoneMaskOption = {
+		'translation': {
+    	A: {
+    		pattern: /[7,8]/,
+    		fallback:'7',
+    	},
+		},
+		onKeyPress: function (cep, event, currentField, options) {
+			//console.log("key PRESS");
+			if (cep == '+7(8' && isFieldStart) {
+				$('.input-mask--phone').val("+7(")
+				//return isFieldStart = false;
+			}
+			if (cep.indexOf("+8") == 0 && isFieldStart) {
+				//console.log(0);
+				$('.input-mask--phone').val(cep.replace("+8(",'+7('))
+				//return isFieldStart = false;
+			}
+			if (cep == '+8' && isFieldStart) {
+				$('.input-mask--phone').val("+7")
+				//console.log(cep);
+				//return isFieldStart = false;
+			}
+
+			if (currentField.val().length < 4) {
+				isFieldStart = true
+			}
+		},
+
+	}
+	/*$('.input-mask--phone').bind('paste', function(e) {
+			$(this).unmask()
+			var data = e.originalEvent.clipboardData.getData('Text');
+			 $(this).val(data.replace(new RegExp('\\+7\\(|8\\(|8', 'g'),"")).mask('+7(000)000-00-00', phoneMaskOption);
+		});*/
+
+	$('.input-mask--phone').on('change', function(e) {
+			//console.log("change");
+			$(this).unmask()
+			var data = e.target.value
+			//console.log(e.target);
+			//console.log("reg",data.replace(new RegExp('\\+7\\(|8\\(|\\+7|8', 'g'),""));
+			var reg = data.replace(new RegExp('\\+7\\(|8\\(|\\+7|^[8]', 'g'),"")
+			//console.log("data",data);
+			//console.log("reg",reg);
+			 $(this).val(reg).mask('+7(000)000-00-00', phoneMaskOption);
+		})
+
+	$('.input-mask--phone').mask('+A(000)000-00-00', phoneMaskOption);
+	$('.js-mask--date').mask('00/00/0000');
+	// phone mask === end
+
 
 	//window.condition = {};
 	//window.condition.info = info;

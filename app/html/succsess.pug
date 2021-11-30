@@ -1,0 +1,47 @@
+include block_html/_style.pug
+include block_html/_include.pug
+
+.page
+	+header()
+	.content.psv-100.bg--fieldBackground.md__p-0.sm__psv-0
+		.wmax-820.ml-a.mr-a
+			.bg--white.br-12.md__br-0.sm__br-0
+				.psh-40.psv-20.sm__psh-20
+					img(src="img/smile-happy.png", alt="").mb-32.mt-32.ml-a.mr-a
+					.type--w700.type--xl.type--center.mb-12 Спасибо за заказ
+					.type--md.type--center.type--primary.mb-48 Оператор свяжеться с Вами в ближайшее время
+
+					.contract-total-wrap.mb-32(data-test="orderTotal")
+						.contract-total(data-test="orderTotalItem")
+							.contract-total__val.type--secondary Куриная котлета с зеленой гречей в сливочно-ореховом соусе
+							.type--black
+								span.mr-12 2шт
+								span 6300 руб
+						.contract-total(data-test="orderTotalItem")
+							.w50.mr-10.type--secondary Balance
+							.type--black 8100 руб
+						.contract-total(data-test="orderTotalItemSale")
+							.w50.mr-10.type--secondary Скидка
+							.type--mark +1200 руб
+						.contract-total(data-test="orderTotalItemBonus")
+							.w50.mr-10.type--secondary Будет начислено бонусов
+							.type--mark +500
+						.contract-total(data-test="orderTotalCost")
+							.w50.mr-10.type--lg.type--w700 Итого
+							.type--w700.type--md 6300 руб
+
+					.f.f-jcc.mb-24
+						a(href="#").btn--md.btn--mark.btn--mobile Перейти на сайт BeFit
+
+				.bor.bor-t.bor--border.p-32
+					.type--md.type--w700.type--center.mb-24 Следите за нами в социальных сетях
+					.soc-row.soc-row--mid.soc-row--lg.mb-24
+						a(href="#").soc-row__el.soc-row__el--vk
+							+icon("soc-vk","icon")
+						a(href="#").soc-row__el.soc-row__el--fb
+							+icon("soc-fb","icon")
+						a(href="#").soc-row__el.soc-row__el--instagram
+							+icon("soc-inst","icon")
+	+footer()
+	+modal()
+include ./block_html/_script.pug
